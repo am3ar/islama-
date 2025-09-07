@@ -1,116 +1,117 @@
+د
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>أبا الأشعري | بطاقة تعريف فاخرة</title>
-  <meta name="description" content="نَبْذَةٌ فَاخِرَة عن أَبا الأَشْعَرِيّ: مُسْلِمٌ أَشْعَرِيّ، مُهْتَمٌّ بِالشَّرِيعَةِ وَالفِقْهِ وَعِلْمِ الكَلَامِ." />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>أبا الأشعري — بروفايل كلاسيكي</title>
+  <meta name="description" content="بَطَاقَةُ تَعْرِيفٍ لِأَبا الأَشْعَرِيّ — مُسْلِمٌ أَشْعَرِيّ. اهتمامات: الشريعة، الفقه، علم الكلام." />
 
+  <!-- خط عربي مع دعم التشكيل -->
   <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
   <style>
+    /* ألوان كلاسيكية متوازنة */
     :root{
-      --bg:#0a0a0d;
-      --card:#1b1b20;
-      --ink:#f5f2eb;
-      --muted:#c7bca8;
-      --gold:#d5b671;
-      --line:#2f2c36;
-      --accent:#d5b671;
-      --maxw:960px;
-      --radius:28px;
-      --shadow:0 20px 50px rgba(0,0,0,0.6);
+      --bg:#080809;       /* خلفية داكنة */
+      --card:#0f0f12;     /* خلفية البطاقة */
+      --text:#f7f4ee;     /* نص أساسي */
+      --muted:#bfb6a5;    /* نص ثانوي */
+      --gold:#bfa25a;     /* لمسة ذهبية ناعمة */
+      --accent:rgba(191,162,90,0.06);
+      --maxw:820px;
+      --radius:18px;
     }
 
-    *, *::before, *::after{box-sizing:border-box;}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;padding:0;font-family:'Amiri', serif;background:var(--bg);color:var(--text);}
 
-    html, body{height:100%; margin:0; font-family:'Amiri', serif; color:var(--ink); background:radial-gradient(circle at top left, #1d1c26, var(--bg)) fixed; display:grid; place-items:center; padding:24px; line-height:2; overflow-x:hidden;}
-
-    body::before{
-      content:'';
-      position:fixed; top:-50%; left:-50%; width:200%; height:200%;
-      background:radial-gradient(circle, rgba(213,182,113,0.12) 0%, transparent 70%), repeating-radial-gradient(circle at center, rgba(213,182,113,0.05) 0, rgba(213,182,113,0.05) 2px, transparent 2px, transparent 6px);
-      pointer-events:none; z-index:0; animation:rotate 60s linear infinite;
+    /* خلفية زخارف إسلامية بسيطة باستخدام SVG مبطّن */
+    body{
+      display:flex;align-items:center;justify-content:center;padding:28px;
+      background-image: radial-gradient(circle at 10% 10%, rgba(191,162,90,0.02), transparent 8%), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><defs><pattern id="p" width="60" height="60" patternUnits="userSpaceOnUse"><g fill="none" stroke="rgba(191,162,90,0.06)" stroke-width="1"><path d="M30 0 L30 60 M0 30 L60 30"/></g></pattern></defs><rect width="120" height="120" fill="url(%23p)" opacity="0.6"/></svg>');
+      background-repeat:repeat; background-size:480px; /* يجعل الزخرفة بسيطة ومتكررة */
     }
 
-    @keyframes rotate{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
-
-    .wrap{width:100%; max-width:var(--maxw); padding:0 16px; z-index:1; position:relative;}
-
+    .card-wrap{width:100%;max-width:var(--maxw);}
     .card{
-      background:linear-gradient(180deg, rgba(213,182,113,0.12), rgba(213,182,113,0)), var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:40px;
-      position:relative;
-      box-shadow:var(--shadow);
-      overflow:hidden;
-      backdrop-filter: blur(5px);
-      transition:transform 0.3s ease;
-    }
-    .card:hover{transform:translateY(-6px);}
-
-    .card:before, .card:after{
-      content:''; position:absolute; inset:12px; border:1px solid rgba(213,182,113,.25); border-radius:calc(var(--radius)-6px); pointer-events:none;
-    }
-    .card:after{ inset:20px; border-color:rgba(213,182,113,.12); border-radius:calc(var(--radius)-12px); }
-
-    header{display:flex; align-items:center; gap:20px; flex-wrap:wrap; justify-content:space-between; margin-bottom:28px; border-bottom:1px dashed rgba(213,182,113,.35); padding-bottom:20px;}
-
-    .brand{display:flex; align-items:center; gap:18px; min-width:0;}
-    .seal{
-      width:68px; height:68px; border-radius:50%; background: conic-gradient(from 180deg at 50% 50%, rgba(213,182,113,.4), rgba(213,182,113,.12)); border:1px solid rgba(213,182,113,.5); display:grid; place-items:center; color:var(--gold); box-shadow: inset 0 0 35px rgba(213,182,113,.15); font-size:28px;
+      background:linear-gradient(180deg, rgba(191,162,90,0.02), rgba(0,0,0,0)), var(--card);
+      border-radius:var(--radius); padding:32px; border:1px solid rgba(255,255,255,0.03);
+      box-shadow:0 8px 30px rgba(0,0,0,0.6);
     }
 
-    h1{font-weight:900; margin:0; font-size:clamp(28px, 5vw, 48px); letter-spacing:.5px; background:linear-gradient(90deg, #fff 0%, #e9e4d8 35%, #ded8c9 100%); -webkit-background-clip:text; background-clip:text; color:transparent;}
-    .subtitle{color:var(--muted); font-size:16px; letter-spacing:.2px;}
+    header{display:flex;gap:18px;align-items:center;margin-bottom:18px}
+    .seal{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-size:26px;color:var(--gold);background:linear-gradient(180deg, rgba(191,162,90,0.08), rgba(191,162,90,0.02));border:1px solid rgba(191,162,90,0.12)}
 
-    .grid{display:grid; grid-template-columns:1fr; gap:26px;}
-    @media(min-width:720px){.grid{grid-template-columns:1.3fr .9fr; gap:34px;}}
+    h1{margin:0;font-size:clamp(24px,4.5vw,40px);line-height:1;letter-spacing:0.2px}
+    .subtitle{color:var(--muted);margin-top:6px;font-size:14px}
 
-    .panel{background:rgba(255,255,255,.05); border:1px solid var(--line); border-radius:24px; padding:26px 22px 22px; transition:transform 0.3s ease, box-shadow 0.3s ease;}
-    .panel:hover{transform:translateY(-5px); box-shadow:0 25px 60px rgba(0,0,0,0.65);}
-    .panel h2{margin:0 0 16px; font-size:19px; letter-spacing:.5px; color:#fff; display:flex; align-items:center; gap:10px;}
-    .panel h2 .dot{width:8px; height:8px; background:var(--gold); border-radius:50%; display:inline-block;}
-    .kv{display:grid; gap:16px;}
-    .row{display:flex; gap:16px; align-items:flex-start;}
-    .label{color:var(--muted); width:140px; flex:0 0 140px; font-weight:600;}
-    .value{color:#fff; font-weight:500;}
+    .content{display:flex;flex-direction:column;gap:22px}
 
-    .list{display:flex; flex-wrap:wrap; gap:16px;}
-    .tag{border:1px solid rgba(213,182,113,.35); color:#f5f2eb; padding:9px 16px; border-radius:999px; font-size:16px; background:rgba(213,182,113,.1); font-weight:500; transition:transform 0.2s ease;}
-    .tag:hover{transform:scale(1.06);}
+    .row{display:flex;gap:16px;align-items:flex-start}
+    .label{width:128px;color:var(--muted);font-weight:700}
+    .value{flex:1;color:var(--text);font-weight:500}
 
-    .quote{margin-top:20px; padding:20px 22px; border-right:4px solid var(--gold); background:rgba(213,182,113,.1); border-radius:16px; color:#f3f0e8; font-style:italic; line-height:2.1; font-size:18px;}
+    .tags{display:flex;gap:10px;flex-wrap:wrap}
+    .tag{padding:8px 14px;border-radius:999px;background:var(--accent);color:var(--text);border:1px solid rgba(191,162,90,0.12);font-weight:600}
 
-    footer{margin-top:30px; display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:flex-end; color:var(--muted);}
-    .fine{font-size:14px; font-weight:400; letter-spacing:.3px;}
+    .quote{margin-top:6px;padding:16px;border-right:4px solid var(--gold);background:rgba(191,162,90,0.04);border-radius:10px;color:var(--muted);font-style:italic}
+
+    footer{display:flex;justify-content:flex-end;color:var(--muted);font-size:13px;margin-top:8px}
+
+    /* تجاوب للشاشات الصغيرة */
+    @media (max-width:520px){
+      .label{width:110px;font-size:14px}
+      .card{padding:22px}
+      header{gap:12px}
+      .seal{width:54px;height:54px;font-size:22px}
+    }
+
+    /* تحسين الطباعة (اختياري) */
+    @media print{body{background:#fff;color:#000} .card{box-shadow:none}}
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <section class="card" aria-label="بطاقة التعريف">
+  <div class="card-wrap">
+    <article class="card" role="region" aria-label="بطاقة تعريف أبا الأشعري">
       <header>
-        <div class="brand">
-          <div class="seal" aria-hidden="true">☪︎</div>
-          <div>
-            <h1>أَبا الأَشْعَرِيّ</h1>
-            <div class="subtitle">مُسْلِمٌ أَشْعَرِيّ — بَطَاقَةُ تَعْرِيفٍ فَاخِرَة</div>
-          </div>
+        <div class="seal" aria-hidden="true">☪︎</div>
+        <div>
+          <h1>أَبَا الأَشْعَرِيّ</h1>
+          <div class="subtitle">مُسْلِمٌ أَشْعَرِيّ • بَطَاقَةُ تَعْرِيفٍ كْلَاسِيكيَّة</div>
         </div>
       </header>
 
-      <div class="grid">
-        <div class="panel">
-          <h2><span class="dot"></span> النَّبْذَةُ</h2>
-          <div class="kv">
-            <div class="row"><div class="label">الاِسْمُ</div><div class="value">أَبا الأَشْعَرِيّ</div></div>
-            <div class="row"><div class="label">الهُوِيَّةُ</div><div class="value">مُسْلِمٌ أَشْعَرِيّ</div></div>
-            <div class="row"><div class="label">الشَّغَفُ</div><div class="value">نَشْرُ الخَيْرِ، طَلَبُ العِلْمِ، وَمُسَاعَدَةُ الآخَرِينَ</div></div>
-          </div>
-          <div class="quote">الحَيَاةُ رِحْلَةٌ... وَالزَّمَنُ يَمْضِي، وَلَكِنِ الأَثَرُ يَبْقَى.</div>
+      <section class="content">
+        <div class="row">
+          <div class="label">الاسم</div>
+          <div class="value">أَبَا الأَشْعَرِيّ</div>
         </div>
 
-        <div class="panel">
-          <h2><span class="
+        <div class="row">
+          <div class="label">الهُوِيَّة</div>
+          <div class="value">مُسْلِمٌ أَشْعَرِيّ</div>
+        </div>
+
+        <div class="row">
+          <div class="label">الاهتمامات</div>
+          <div class="value tags">
+            <span class="tag">الشَّرِيعَة</span>
+            <span class="tag">الفِقْه</span>
+            <span class="tag">عِلْمُ الكَلَام</span>
+          </div>
+        </div>
+
+        <div class="quote">الحَيَاةُ رِحْلَةٌ... وَالزَّمَنُ يَمْضِي، وَلَكِنَّ الأَثَرَ يَبْقَى.</div>
+      </section>
+
+      <footer>© <span id="year"></span> أَبَا الأَشْعَرِيّ</footer>
+    </article>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
 
 
