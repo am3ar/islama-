@@ -2,71 +2,88 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>أبا الأشعري | بطاقة تعريف كلاسيكية فاخرة</title>
-  <meta name="description" content="نَبْذَةٌ كْلاسِيكيَّة فَاخِرَة عن أَبا الأَشْعَرِيّ: مُسْلِمٌ أَشْعَرِيّ، مُهْتَمٌّ بِالشَّرِيعَةِ وَالفِقْهِ وَعِلْمِ الكَلَامِ. الشَّغَفُ: نَشْرُ الخَيْرِ، طَلَبُ العِلْمِ، وَمُسَاعَدَةُ الآخَرِينَ." />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>أبا الأشعري | بطاقة تعريف فاخرة</title>
+  <meta name="description" content="نَبْذَةٌ فَاخِرَة عن أَبا الأَشْعَرِيّ: مُسْلِمٌ أَشْعَرِيّ، مُهْتَمٌّ بِالشَّرِيعَةِ وَالفِقْهِ وَعِلْمِ الكَلَامِ." />
 
   <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b0b0d;
-      --card:#1a1a1d;
-      --ink:#f3f1ec;
-      --muted:#c2b8a3;
-      --gold:#d4b56f;
-      --line:#2e2b33;
-      --accent:#d4b56f;
-      --maxw:900px;
+      --bg:#0a0a0d;
+      --card:#1b1b20;
+      --ink:#f5f2eb;
+      --muted:#c7bca8;
+      --gold:#d5b671;
+      --line:#2f2c36;
+      --accent:#d5b671;
+      --maxw:960px;
+      --radius:28px;
+      --shadow:0 20px 50px rgba(0,0,0,0.6);
     }
 
-    html, body{height:100%; margin:0; font-family:'Amiri', serif; color:var(--ink); background:radial-gradient(circle at top left, #1c1b22, var(--bg)) fixed; display:grid; place-items:center; padding:24px; line-height:1.95;}
+    *, *::before, *::after{box-sizing:border-box;}
 
-    .wrap{width:100%; max-width:var(--maxw);}
+    html, body{height:100%; margin:0; font-family:'Amiri', serif; color:var(--ink); background:radial-gradient(circle at top left, #1d1c26, var(--bg)) fixed; display:grid; place-items:center; padding:24px; line-height:2; overflow-x:hidden;}
+
+    body::before{
+      content:'';
+      position:fixed; top:-50%; left:-50%; width:200%; height:200%;
+      background:radial-gradient(circle, rgba(213,182,113,0.12) 0%, transparent 70%), repeating-radial-gradient(circle at center, rgba(213,182,113,0.05) 0, rgba(213,182,113,0.05) 2px, transparent 2px, transparent 6px);
+      pointer-events:none; z-index:0; animation:rotate 60s linear infinite;
+    }
+
+    @keyframes rotate{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+
+    .wrap{width:100%; max-width:var(--maxw); padding:0 16px; z-index:1; position:relative;}
 
     .card{
-      background:linear-gradient(180deg, rgba(212,181,111,0.08), rgba(212,181,111,0)) , var(--card);
+      background:linear-gradient(180deg, rgba(213,182,113,0.12), rgba(213,182,113,0)), var(--card);
       border:1px solid var(--line);
-      border-radius:26px;
-      padding:32px;
+      border-radius:var(--radius);
+      padding:40px;
       position:relative;
-      box-shadow:0 15px 40px rgba(0,0,0,.5);
+      box-shadow:var(--shadow);
       overflow:hidden;
-      backdrop-filter: blur(2px);
+      backdrop-filter: blur(5px);
+      transition:transform 0.3s ease;
     }
+    .card:hover{transform:translateY(-6px);}
 
     .card:before, .card:after{
-      content:''; position:absolute; inset:12px; border:1px solid rgba(212,181,111,.25); border-radius:20px; pointer-events:none;
+      content:''; position:absolute; inset:12px; border:1px solid rgba(213,182,113,.25); border-radius:calc(var(--radius)-6px); pointer-events:none;
     }
-    .card:after{ inset:18px; border-color:rgba(212,181,111,.12); border-radius:16px; }
+    .card:after{ inset:20px; border-color:rgba(213,182,113,.12); border-radius:calc(var(--radius)-12px); }
 
-    header{display:flex; align-items:center; gap:18px; flex-wrap:wrap; justify-content:space-between; margin-bottom:22px; border-bottom:1px dashed rgba(212,181,111,.3); padding-bottom:16px;}
+    header{display:flex; align-items:center; gap:20px; flex-wrap:wrap; justify-content:space-between; margin-bottom:28px; border-bottom:1px dashed rgba(213,182,113,.35); padding-bottom:20px;}
 
-    .brand{display:flex; align-items:center; gap:16px; min-width:0;}
+    .brand{display:flex; align-items:center; gap:18px; min-width:0;}
     .seal{
-      width:60px; height:60px; border-radius:50%; background: conic-gradient(from 180deg at 50% 50%, rgba(212,181,111,.3), rgba(212,181,111,.08)); border:1px solid rgba(212,181,111,.5); display:grid; place-items:center; color:var(--gold); box-shadow: inset 0 0 25px rgba(212,181,111,.1); font-size:24px;
+      width:68px; height:68px; border-radius:50%; background: conic-gradient(from 180deg at 50% 50%, rgba(213,182,113,.4), rgba(213,182,113,.12)); border:1px solid rgba(213,182,113,.5); display:grid; place-items:center; color:var(--gold); box-shadow: inset 0 0 35px rgba(213,182,113,.15); font-size:28px;
     }
 
-    h1{font-weight:900; margin:0; font-size:clamp(24px, 4.8vw, 42px); letter-spacing:.4px; background:linear-gradient(90deg, #fff 0%, #e8e2d8 35%, #dcd6c8 100%); -webkit-background-clip:text; background-clip:text; color:transparent;}
-    .subtitle{color:var(--muted); font-size:15px;}
+    h1{font-weight:900; margin:0; font-size:clamp(28px, 5vw, 48px); letter-spacing:.5px; background:linear-gradient(90deg, #fff 0%, #e9e4d8 35%, #ded8c9 100%); -webkit-background-clip:text; background-clip:text; color:transparent;}
+    .subtitle{color:var(--muted); font-size:16px; letter-spacing:.2px;}
 
-    .grid{display:grid; grid-template-columns:1fr; gap:20px;}
-    @media(min-width:720px){.grid{grid-template-columns:1.2fr .8fr; gap:26px;}}
+    .grid{display:grid; grid-template-columns:1fr; gap:26px;}
+    @media(min-width:720px){.grid{grid-template-columns:1.3fr .9fr; gap:34px;}}
 
-    .panel{background:rgba(255,255,255,.03); border:1px solid var(--line); border-radius:18px; padding:20px 18px 18px;}
-    .panel h2{margin:0 0 12px; font-size:17px; letter-spacing:.4px; color:#fff; display:flex; align-items:center; gap:10px;}
-    .panel h2 .dot{width:7px; height:7px; background:var(--gold); border-radius:50%; display:inline-block;}
-    .kv{display:grid; gap:12px;}
-    .row{display:flex; gap:12px; align-items:flex-start;}
-    .label{color:var(--muted); width:120px; flex:0 0 120px; font-weight:600;}
+    .panel{background:rgba(255,255,255,.05); border:1px solid var(--line); border-radius:24px; padding:26px 22px 22px; transition:transform 0.3s ease, box-shadow 0.3s ease;}
+    .panel:hover{transform:translateY(-5px); box-shadow:0 25px 60px rgba(0,0,0,0.65);}
+    .panel h2{margin:0 0 16px; font-size:19px; letter-spacing:.5px; color:#fff; display:flex; align-items:center; gap:10px;}
+    .panel h2 .dot{width:8px; height:8px; background:var(--gold); border-radius:50%; display:inline-block;}
+    .kv{display:grid; gap:16px;}
+    .row{display:flex; gap:16px; align-items:flex-start;}
+    .label{color:var(--muted); width:140px; flex:0 0 140px; font-weight:600;}
     .value{color:#fff; font-weight:500;}
 
-    .list{display:flex; flex-wrap:wrap; gap:12px;}
-    .tag{border:1px solid rgba(212,181,111,.35); color:#f3f1ec; padding:7px 12px; border-radius:999px; font-size:15px; background:rgba(212,181,111,.08); font-weight:500;}
+    .list{display:flex; flex-wrap:wrap; gap:16px;}
+    .tag{border:1px solid rgba(213,182,113,.35); color:#f5f2eb; padding:9px 16px; border-radius:999px; font-size:16px; background:rgba(213,182,113,.1); font-weight:500; transition:transform 0.2s ease;}
+    .tag:hover{transform:scale(1.06);}
 
-    .quote{margin-top:16px; padding:16px 18px; border-right:4px solid var(--gold); background:rgba(212,181,111,.08); border-radius:12px; color:#f2eedf; font-style:italic; line-height:2; font-size:16px;}
+    .quote{margin-top:20px; padding:20px 22px; border-right:4px solid var(--gold); background:rgba(213,182,113,.1); border-radius:16px; color:#f3f0e8; font-style:italic; line-height:2.1; font-size:18px;}
 
-    footer{margin-top:24px; display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:flex-end; color:var(--muted);}
-    .fine{font-size:13px; font-weight:400; letter-spacing:.2px;}
+    footer{margin-top:30px; display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:flex-end; color:var(--muted);}
+    .fine{font-size:14px; font-weight:400; letter-spacing:.3px;}
   </style>
 </head>
 <body>
@@ -94,23 +111,6 @@
         </div>
 
         <div class="panel">
-          <h2><span class="dot"></span> الاِهْتِمَامَاتُ</h2>
-          <div class="list" aria-label="قائمة الاهتمامات">
-            <span class="tag">الشَّرِيعَةُ</span>
-            <span class="tag">الفِقْهُ</span>
-            <span class="tag">عِلْمُ الكَلَامِ</span>
-          </div>
-        </div>
-      </div>
+          <h2><span class="
 
-      <footer>
-        <div class="fine">© <span id="year"></span> أَبا الأَشْعَرِيّ — طَابِعٌ كْلاسِيكيٌّ فَاخِر</div>
-      </footer>
-    </section>
-  </main>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
