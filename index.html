@@ -1,30 +1,34 @@
 <!doctype html>
-
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>أبا الأشعري | بطاقة تعريف كلاسيكية</title>
-  <meta name="description" content="نبذة كلاسيكية عن أبا الأشعري: مسلم أشعري، مهتم بالشريعة والفقه وعلم الكلام. الشغف: نشر الخير، طلب العلم، ومساعدة الآخرين." />  <!-- Open Graph (يظهر كمعاينة عند مشاركة الرابط) -->  <meta property="og:type" content="website" />
-  <meta property="og:title" content="أبا الأشعري | بطاقة تعريف" />
-  <meta property="og:description" content="مسلم أشعري — اهتمامات: الشريعة، الفقه، علم الكلام. الشغف: نشر الخير، طلب العلم، ومساعدة الآخرين." />
-  <!-- ملاحظة: غيّر هذا الرابط بعد النشر إلى صورة مطلقة العنوان (URL) ليظهر معاينة أجمل -->
-  <!-- <meta property="og:image" content="https://your-domain.com/preview.png" /> -->  <meta name="theme-color" content="#c4a962" />
+  <meta name="description" content="نَبْذَةٌ كْلاسِيكيَّةٌ عن أَبا الأَشْعَرِيّ: مُسْلِمٌ أَشْعَرِيّ، مُهْتَمٌّ بِالشَّرِيعَةِ وَالفِقْهِ وَعِلْمِ الكَلَامِ. الشَّغَفُ: نَشْرُ الخَيْرِ، طَلَبُ العِلْمِ، وَمُسَاعَدَةُ الآخَرِينَ." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="أَبا الأَشْعَرِيّ | بَطَاقَةُ تَعْرِيفٍ" />
+  <meta property="og:description" content="مُسْلِمٌ أَشْعَرِيّ — اِهْتِمَامَات: الشَّرِيعَة، الفِقْه، عِلْم الكَلَام. الشَّغَف: نَشْرُ الخَيْرِ، طَلَبُ العِلْمِ، وَمُسَاعَدَةُ الآخَرِينَ." />
+
+  <meta name="theme-color" content="#c4a962" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0c0d10;           /* خلفية داكنة أنيقة */
-      --card:#12141a;         /* خلفية البطاقة */
-      --ink:#eae7dc;          /* لون النص */
-      --muted:#b9b3a5;        /* نص ثانوي */
-      --gold:#c4a962;         /* لمسة ذهبية كلاسيكية */
+      --bg:#0c0d10;
+      --card:#12141a;
+      --ink:#eae7dc;
+      --muted:#b9b3a5;
+      --gold:#c4a962;
       --line:#2a2f3a;
       --maxw:860px;
     }
     html,body{height:100%;}
     body{
-      margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Naskh Arabic", "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+      margin:0; font-family: 'Amiri', serif;
       color:var(--ink); background: radial-gradient(1200px 800px at 80% -10%, #1b1f29 0%, #0c0d10 60%) fixed, var(--bg);
       display:grid; place-items:center; padding:24px;
+      line-height:1.9;
     }
     .wrap{ width:100%; max-width:var(--maxw); }
     .card{
@@ -33,70 +37,54 @@
       border-radius:22px; padding:28px; position:relative; box-shadow:0 10px 30px rgba(0,0,0,.35);
       overflow:hidden;
     }
-    .card:before, .card:after{ /* إطار زخرفي رفيع */
+    .card:before, .card:after{
       content:""; position:absolute; inset:10px; border:1px solid rgba(196,169,98,.35); border-radius:18px; pointer-events:none;
     }
-    .card:after{ inset:16px; border-color:rgba(196,169,98,.18); border-radius:14px; }header{
-  display:flex; align-items:center; gap:16px; flex-wrap:wrap; justify-content:space-between;
-  margin-bottom:18px; border-bottom:1px dashed rgba(196,169,98,.35); padding-bottom:14px;
-}
-.brand{
-  display:flex; align-items:center; gap:14px; min-width:0;
-}
-.seal{ /* ختم زخرفي */
-  width:56px; height:56px; border-radius:50%;
-  background: conic-gradient(from 180deg at 50% 50%, rgba(196,169,98,.25), rgba(196,169,98,.05));
-  border:1px solid rgba(196,169,98,.45); display:grid; place-items:center; color:var(--gold);
-  box-shadow: inset 0 0 20px rgba(196,169,98,.08);
-  font-size:22px;
-}
-h1{
-  font-weight:800; margin:0; font-size:clamp(22px, 4.4vw, 38px);
-  letter-spacing:.3px;
-  background: linear-gradient(90deg, #fff 0%, #ddd 35%, #c7c7c7 100%);
-  -webkit-background-clip:text; background-clip:text; color:transparent;
-}
-.subtitle{ color:var(--muted); font-size:14px; }
+    .card:after{ inset:16px; border-color:rgba(196,169,98,.18); border-radius:14px; }
 
-.grid{ display:grid; grid-template-columns: 1fr; gap:18px; }
-@media (min-width:720px){ .grid{ grid-template-columns: 1.2fr .8fr; gap:22px; } }
+    header{
+      display:flex; align-items:center; gap:16px; flex-wrap:wrap; justify-content:space-between;
+      margin-bottom:18px; border-bottom:1px dashed rgba(196,169,98,.35); padding-bottom:14px;
+    }
+    .brand{ display:flex; align-items:center; gap:14px; min-width:0; }
+    .seal{
+      width:56px; height:56px; border-radius:50%;
+      background: conic-gradient(from 180deg at 50% 50%, rgba(196,169,98,.25), rgba(196,169,98,.05));
+      border:1px solid rgba(196,169,98,.45); display:grid; place-items:center; color:var(--gold);
+      box-shadow: inset 0 0 20px rgba(196,169,98,.08);
+      font-size:22px;
+    }
+    h1{
+      font-weight:800; margin:0; font-size:clamp(22px, 4.4vw, 38px);
+      letter-spacing:.3px;
+      background: linear-gradient(90deg, #fff 0%, #ddd 35%, #c7c7c7 100%);
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+    }
+    .subtitle{ color:var(--muted); font-size:14px; }
 
-.panel{
-  background:rgba(255,255,255,.02); border:1px solid var(--line); border-radius:16px; padding:18px 16px 16px;
-}
-.panel h2{
-  margin:0 0 10px; font-size:16px; letter-spacing:.4px; color:#fff; display:flex; align-items:center; gap:8px;
-}
-.panel h2 .dot{ width:6px; height:6px; background:var(--gold); border-radius:50%; display:inline-block; }
-.kv{ display:grid; gap:10px; }
-.row{ display:flex; gap:10px; align-items:flex-start; }
-.label{ color:var(--muted); width:110px; flex:0 0 110px; }
-.value{ color:#fff; }
+    .grid{ display:grid; grid-template-columns: 1fr; gap:18px; }
+    @media (min-width:720px){ .grid{ grid-template-columns: 1.2fr .8fr; gap:22px; } }
 
-.list{ display:flex; flex-wrap:wrap; gap:10px; }
-.tag{
-  border:1px solid rgba(196,169,98,.35); color:#f6f1e0; padding:6px 10px; border-radius:999px; font-size:14px; background:rgba(196,169,98,.07);
-}
+    .panel{ background:rgba(255,255,255,.02); border:1px solid var(--line); border-radius:16px; padding:18px 16px 16px; }
+    .panel h2{ margin:0 0 10px; font-size:16px; letter-spacing:.4px; color:#fff; display:flex; align-items:center; gap:8px; }
+    .panel h2 .dot{ width:6px; height:6px; background:var(--gold); border-radius:50%; display:inline-block; }
+    .kv{ display:grid; gap:10px; }
+    .row{ display:flex; gap:10px; align-items:flex-start; }
+    .label{ color:var(--muted); width:110px; flex:0 0 110px; }
+    .value{ color:#fff; }
 
-.quote{
-  margin-top:14px; padding:14px 16px; border-left:3px solid var(--gold); background:rgba(196,169,98,.06); border-radius:10px;
-  color:#f2eedf; font-style:italic; line-height:1.8;
-}
+    .list{ display:flex; flex-wrap:wrap; gap:10px; }
+    .tag{ border:1px solid rgba(196,169,98,.35); color:#f6f1e0; padding:6px 10px; border-radius:999px; font-size:14px; background:rgba(196,169,98,.07); }
 
-footer{
-  margin-top:20px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between; color:var(--muted);
-}
-.links{ display:flex; gap:10px; flex-wrap:wrap; }
-.btn{
-  display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border:1px solid rgba(196,169,98,.35);
-  border-radius:12px; background:rgba(196,169,98,.08); color:#fff; text-decoration:none; font-weight:600; font-size:14px;
-  transition:.2s transform ease, .2s background ease;
-}
-.btn:hover{ transform:translateY(-1px); background:rgba(196,169,98,.15); }
-.btn .ico{ font-size:16px; }
+    .quote{ margin-top:14px; padding:14px 16px; border-right:3px solid var(--gold); background:rgba(196,169,98,.06); border-radius:10px; color:#f2eedf; font-style:italic; line-height:1.9; }
 
-.fine{ font-size:12px; }
+    footer{ margin-top:20px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between; color:var(--muted); }
+    .links{ display:flex; gap:10px; flex-wrap:wrap; }
+    .btn{ display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border:1px solid rgba(196,169,98,.35); border-radius:12px; background:rgba(196,169,98,.08); color:#fff; text-decoration:none; font-weight:600; font-size:14px; transition:.2s transform ease, .2s background ease; }
+    .btn:hover{ transform:translateY(-1px); background:rgba(196,169,98,.15); }
+    .btn .ico{ font-size:16px; }
 
+    .fine{ font-size:12px; }
   </style>
 </head>
 <body>
@@ -106,51 +94,49 @@ footer{
         <div class="brand">
           <div class="seal" aria-hidden="true">☪︎</div>
           <div>
-            <h1>أبا الأشعري</h1>
-            <div class="subtitle">مسلم أشعري — بطاقة تعريف كلاسيكية</div>
+            <h1>أَبا الأَشْعَرِيّ</h1>
+            <div class="subtitle">مُسْلِمٌ أَشْعَرِيّ — بَطَاقَةُ تَعْرِيفٍ كْلاسِيكيَّة</div>
           </div>
         </div>
-        <a class="btn" href="#contact" aria-label="تواصل معي">
-          <span class="ico">✉️</span>
-          <span>تواصل</span>
+        <a class="btn" href="https://discord.gg/nDkMg34J" target="_blank" rel="noopener" aria-label="ديسكورد">
+          <span class="ico">💬</span>
+          <span>ديسكورد</span>
         </a>
-      </header><div class="grid">
-    <!-- العمود الأيسر -->
-    <div class="panel">
-      <h2><span class="dot"></span> النبذة</h2>
-      <div class="kv">
-        <div class="row"><div class="label">الاسم</div><div class="value">أبا الأشعري</div></div>
-        <div class="row"><div class="label">الهوية</div><div class="value">مسلم أشعري</div></div>
-        <div class="row"><div class="label">الشغف</div><div class="value">نشر الخير، طلب العلم، ومساعدة الآخرين</div></div>
+      </header>
+
+      <div class="grid">
+        <div class="panel">
+          <h2><span class="dot"></span> النَّبْذَةُ</h2>
+          <div class="kv">
+            <div class="row"><div class="label">الاِسْمُ</div><div class="value">أَبا الأَشْعَرِيّ</div></div>
+            <div class="row"><div class="label">الهُوِيَّةُ</div><div class="value">مُسْلِمٌ أَشْعَرِيّ</div></div>
+            <div class="row"><div class="label">الشَّغَفُ</div><div class="value">نَشْرُ الخَيْرِ، طَلَبُ العِلْمِ، وَمُسَاعَدَةُ الآخَرِينَ</div></div>
+          </div>
+          <div class="quote">الحَيَاةُ رِحْلَةٌ... وَالزَّمَنُ يَمْضِي، وَلَكِنِ الأَثَرُ يَبْقَى.</div>
+        </div>
+
+        <div class="panel">
+          <h2><span class="dot"></span> الاِهْتِمَامَاتُ</h2>
+          <div class="list" aria-label="قائمة الاهتمامات">
+            <span class="tag">الشَّرِيعَةُ</span>
+            <span class="tag">الفِقْهُ</span>
+            <span class="tag">عِلْمُ الكَلَامِ</span>
+          </div>
+        </div>
       </div>
 
-      <div class="quote">الحياة رحلة... والزمن يمضي، لكن الأثر يبقى.</div>
-    </div>
+      <footer>
+        <div class="links" aria-label="رَابِطُ التَّوَاصُل">
+          <a class="btn" href="https://discord.gg/nDkMg34J" target="_blank" rel="noopener"><span class="ico">💬</span>ديسكورد</a>
+        </div>
+        <div class="fine">© <span id="year"></span> أَبا الأَشْعَرِيّ — طَابِعٌ كْلاسِيكيٌّ أَنِيق</div>
+      </footer>
+    </section>
+  </main>
 
-    <!-- العمود الأيمن -->
-    <div class="panel">
-      <h2><span class="dot"></span> الاهتمامات</h2>
-      <div class="list" aria-label="قائمة الاهتمامات">
-        <span class="tag">الشريعة</span>
-        <span class="tag">الفقه</span>
-        <span class="tag">علم الكلام</span>
-      </div>
-    </div>
-  </div>
-
-  <footer id="contact">
-    <div class="links" aria-label="روابط التواصل">
-      <!-- حدّث الروابط التالية حسب حساباتك -->
-      <a class="btn" href="https://discord.com/users/your-id" target="_blank" rel="noopener"><span class="ico">💬</span>ديسكورد</a>
-      <a class="btn" href="https://t.me/your-handle" target="_blank" rel="noopener"><span class="ico">📨</span>تليجرام</a>
-      <a class="btn" href="mailto:you@example.com"><span class="ico">📧</span>بريد</a>
-    </div>
-    <div class="fine">© <span id="year"></span> أبا الأشعري — طابع كلاسيكي أنيق</div>
-  </footer>
-</section>
-
-  </main>  <script>
-    // تحديث السنة تلقائيًا
+  <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-  </script></body>
+  </script>
+</body>
 </html>
+
