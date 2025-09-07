@@ -2,143 +2,245 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>أبا الأشعري — بطاقة تعريف</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>أبا الأشعري — بروفايل فخم</title>
+  <meta name="description" content="بطاقة تعريف فاخرة لأبا الأشعري — مسلم أشعري. اهتمامات: الشريعة، الفقه، علم الكلام." />
 
-  <!-- خط عربي واضح وجميل -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- خطوط -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg: #0d0d0f;
-      --card: #1a1a1d;
-      --text: #f5f5f5;
-      --muted: #c5c1b5;
-      --gold: #d4af37;
-      --accent: rgba(212, 175, 55, 0.08);
-      --radius: 18px;
-      --shadow: 0 10px 40px rgba(0,0,0,0.6);
-      --maxw: 600px;
+    :root{
+      --bg-900: #060607;
+      --card-900: #0f1112;
+      --text: #f6f3ec;
+      --muted: #c7bca8;
+      --gold-1: #f7e7a8;
+      --gold-2: #c8a93a;
+      --gold-accent: rgba(200,169,58,0.12);
+      --glass: rgba(255,255,255,0.02);
+      --radius: 20px;
+      --maxw: 920px;
+      --pad: 34px;
+      --shadow-outer: 0 24px 60px rgba(0,0,0,0.75);
+      --line: rgba(255,255,255,0.04);
+      --ease: cubic-bezier(.2,.9,.2,1);
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: var(--bg);
-      font-family: 'Cairo', sans-serif;
-      color: var(--text);
-      line-height: 1.7;
-      background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/moroccan-flower.png');
-      background-size: 200px;
+    /* Base reset */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: "Cairo", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Arabic", sans-serif;
+      color:var(--text);
+      background: linear-gradient(180deg,#050506 0%, #0b0b0d 60%);
+      display:grid;place-items:center;
+      padding:48px;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+      overflow-x:hidden;
     }
 
-    .card {
-      max-width: var(--maxw);
-      width: 100%;
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      border: 1px solid rgba(255,255,255,0.05);
+    /* Decorative SVG background (centered, soft) */
+    body::before{
+      content:"";
+      position:fixed; inset:0; z-index:0;
+      background-image: url('data:image/svg+xml;utf8,\
+        <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">\
+          <defs>\
+            <pattern id="geom" width="120" height="120" patternUnits="userSpaceOnUse">\
+              <g fill="none" stroke="%23c8a93a" stroke-opacity="0.06" stroke-width="1">\
+                <path d="M60 0 L60 120 M0 60 L120 60"/>\
+              </g>\
+            </pattern>\
+            <radialGradient id="halo" cx="50%" cy="35%" r="60%">\
+              <stop offset="0" stop-color="%23c8a93a" stop-opacity="0.06" />\
+              <stop offset="1" stop-color="%23c8a93a" stop-opacity="0" />\
+            </radialGradient>\
+          </defs>\
+          <rect width="1200" height="1200" fill="url(%23geom)"/>\
+          <rect width="1200" height="1200" fill="url(%23halo)"/>\
+        </svg>');
+      background-repeat:no-repeat;
+      background-position:center;
+      background-size:1400px 1400px;
+      pointer-events:none;
+      mix-blend-mode:screen;
+      opacity:0.95;
+      transform: translateZ(0);
     }
 
-    header {
-      text-align: center;
-    }
-    .seal {
-      width: 80px; height: 80px;
-      margin: 0 auto 12px;
-      border-radius: 50%;
-      display: grid; place-items: center;
-      font-size: 32px; color: var(--gold);
-      background: var(--accent);
-      border: 1px solid rgba(212,175,55,0.25);
-    }
-    h1 { font-size: 32px; font-weight: 700; margin-bottom: 6px; }
-    .subtitle { font-size: 16px; color: var(--muted); }
-
-    .row { display: flex; gap: 10px; }
-    .label { min-width: 100px; font-weight: 600; color: var(--muted); }
-    .value { flex: 1; }
-
-    .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
-    .tag {
-      padding: 6px 14px;
-      border-radius: 999px;
-      background: var(--accent);
-      border: 1px solid rgba(212,175,55,0.15);
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text);
+    /* Card container */
+    .wrap{width:100%;max-width:var(--maxw);z-index:1;padding:0 20px}
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(0,0,0,0.02)), var(--card-900);
+      border-radius:calc(var(--radius) + 4px);
+      padding:calc(var(--pad));
+      box-shadow:var(--shadow-outer);
+      border:1px solid var(--line);
+      position:relative;
+      overflow:visible;
+      transform-origin:center;
+      animation: enter 420ms var(--ease) both;
     }
 
-    .quote {
-      border-right: 4px solid var(--gold);
-      padding: 14px 18px;
-      background: rgba(212,175,55,0.07);
-      border-radius: 12px;
-      font-style: italic;
-      color: var(--muted);
-      font-size: 15px;
-      text-align: center;
+    /* thin gold frame using pseudo element */
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:8px;
+      border-radius:calc(var(--radius) - 6px);
+      padding:2px;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.005)),
+        conic-gradient(from 180deg at 50% 50%, rgba(0,0,0,0.0), rgba(0,0,0,0.0));
+      -webkit-mask: linear-gradient(#000, #000) content-box, linear-gradient(#000,#000);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events:none;
+    }
+    /* subtle golden inner border using SVG overlay */
+    .card::after{
+      content:"";
+      position:absolute; inset:6px; border-radius:calc(var(--radius) - 4px);
+      background: linear-gradient(180deg, rgba(200,169,58,0.06), rgba(200,169,58,0.02));
+      pointer-events:none;
+      mix-blend-mode:overlay;
+      opacity:0.6;
     }
 
-    footer {
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-      margin-top: 6px;
+    @keyframes enter{
+      from{opacity:0; transform:scale(0.985) translateY(8px)}
+      to{opacity:1; transform:scale(1) translateY(0)}
     }
 
-    @media (max-width: 600px) {
-      .card { padding: 20px; }
-      h1 { font-size: 26px; }
-      .subtitle { font-size: 14px; }
+    header{
+      display:flex; gap:18px; align-items:center; margin-bottom:8px;
+    }
+    .seal{
+      width:86px;height:86px;border-radius:50%;
+      background: radial-gradient(circle at 30% 30%, rgba(247,231,168,0.12), rgba(212,169,58,0.04));
+      border:1px solid rgba(200,169,58,0.18);
+      display:grid; place-items:center; color:var(--gold-2);
+      font-size:34px; flex-shrink:0;
+      box-shadow: inset 0 6px 18px rgba(0,0,0,0.25);
+    }
+    .headtext h1{
+      margin:0; font-family: "Scheherazade New", serif; font-weight:700;
+      font-size: clamp(28px, 4.4vw, 46px); line-height:1; letter-spacing:0.2px;
+      color:var(--text);
+    }
+    .headtext .subtitle{
+      margin-top:8px; color:var(--muted); font-size:15px;
+    }
+
+    /* layout */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:26px;
+      align-items:start;
+    }
+    @media (max-width:860px){
+      .grid{grid-template-columns:1fr; padding-top:6px}
+    }
+
+    /* main panel */
+    .main{
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));
+      border-radius:12px; padding:18px; border:1px solid rgba(255,255,255,0.02);
+    }
+    .kv{display:flex;flex-direction:column;gap:16px}
+    .row{display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap}
+    .label{min-width:130px;color:var(--muted);font-weight:700}
+    .value{flex:1;color:var(--text);font-weight:500}
+
+    /* side panel */
+    .side{
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));
+      border-radius:12px; padding:18px; border:1px solid rgba(255,255,255,0.02);
+      display:flex;flex-direction:column;gap:12px;align-items:stretch;
+    }
+    .tags{display:flex;flex-wrap:wrap;gap:10px}
+    .tag{
+      background:var(--gold-accent);
+      color:var(--text);
+      padding:10px 16px;border-radius:999px;border:1px solid rgba(200,169,58,0.12);
+      font-weight:600;font-size:14px;cursor:default;transition:transform 220ms var(--ease), background 220ms var(--ease);
+    }
+    .tag:hover{transform:scale(1.03);background:rgba(200,169,58,0.18)}
+
+    .quote{
+      margin-top:10px;padding:16px;border-right:4px solid var(--gold-2);
+      background: rgba(200,169,58,0.06); border-radius:10px; color:var(--muted); font-style:italic;
+    }
+
+    /* subtle gold shimmer on hover */
+    .card:hover .seal{
+      box-shadow: inset 0 6px 18px rgba(0,0,0,0.25), 0 6px 20px rgba(200,169,58,0.06);
+      transform: translateY(-2px);
+    }
+
+    /* footer */
+    footer{display:flex;justify-content:center;color:var(--muted);font-size:13px;margin-top:6px}
+
+    /* Accessibility: respect reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      .card{animation:none;transition:none}
+      .tag{transition:none}
+    }
+
+    /* Responsive tweaks */
+    @media (max-width:580px){
+      .seal{width:64px;height:64px;font-size:26px}
+      .headtext h1{font-size:22px}
+      .label{min-width:110px}
+      .grid{gap:18px}
     }
   </style>
 </head>
 <body>
-  <article class="card" role="region" aria-label="بطاقة تعريف أبا الأشعري">
-    <header>
-      <div class="seal">☪︎</div>
-      <h1>أَبَا الأَشْعَرِيّ</h1>
-      <div class="subtitle">مُسْلِمٌ أَشْعَرِيّ • بَطَاقَةُ تَعْرِيفٍ</div>
-    </header>
+  <div class="wrap">
+    <article class="card" role="region" aria-label="بروفايل أبا الأشعري">
+      <header>
+        <div class="seal" aria-hidden="true">☪︎</div>
+        <div class="headtext">
+          <h1>أَبَا الأَشْعَرِيّ</h1>
+          <div class="subtitle">مُسْلِمٌ أَشْعَرِيّ • بُرُوفَايْل كْلَاسِيكيٌّ فَاخِر</div>
+        </div>
+      </header>
 
-    <div class="row">
-      <div class="label">الاسم</div>
-      <div class="value">أَبَا الأَشْعَرِيّ</div>
-    </div>
+      <div class="grid" role="main">
+        <section class="main" aria-label="النبذة">
+          <div class="kv" aria-hidden="false">
+            <div class="row"><div class="label">الاسم</div><div class="value">أَبَا الأَشْعَرِيّ</div></div>
+            <div class="row"><div class="label">الهُوِيَّة</div><div class="value">مُسْلِمٌ أَشْعَرِيّ</div></div>
+            <div class="row"><div class="label">الشَّغَف</div><div class="value">نَشْرُ الخَيْرِ، طَلَبُ العِلْمِ، وَمُسَاعَدَةُ الآخَرِينَ</div></div>
+          </div>
 
-    <div class="row">
-      <div class="label">الهُوِيَّة</div>
-      <div class="value">مُسْلِمٌ أَشْعَرِيّ</div>
-    </div>
+          <div class="quote" aria-label="اقتباس">الحَيَاةُ رِحْلَةٌ... وَالزَّمَنُ يَمْضِي، وَلَكِنَّ الأَثَرَ يَبْقَى.</div>
+        </section>
 
-    <div class="row">
-      <div class="label">الاهتمامات</div>
-      <div class="value tags">
-        <span class="tag">الشَّرِيعَة</span>
-        <span class="tag">الفِقْه</span>
-        <span class="tag">عِلْمُ الكَلَام</span>
+        <aside class="side" aria-label="الاهتمامات">
+          <h3 style="margin:0;color:var(--text);font-weight:700;font-size:15px">الاهتمامات</h3>
+          <div class="tags" role="list">
+            <span class="tag" role="listitem">الشَّرِيعَة</span>
+            <span class="tag" role="listitem">الفِقْه</span>
+            <span class="tag" role="listitem">عِلْمُ الكَلَام</span>
+          </div>
+          <!-- reserved area for future items (awards, links...) -->
+        </aside>
       </div>
-    </div>
 
-    <div class="quote">الحَيَاةُ رِحْلَةٌ... وَالزَّمَنُ يَمْضِي، وَلَكِنَّ الأَثَرَ يَبْقَى.</div>
-
-    <footer>© <span id="year"></span> أَبَا الأَشْعَرِيّ</footer>
-  </article>
+      <footer>© <span id="year"></span> أَبَا الأَشْعَرِيّ</footer>
+    </article>
+  </div>
 
   <script>
+    // السنة التلقائية
     document.getElementById('year').textContent = new Date().getFullYear();
+    // small accessibility helper: allow focusing tags with keyboard for copy/select if needed
+    document.querySelectorAll('.tag').forEach(t => t.setAttribute('tabindex','0'));
   </script>
 </body>
 </html>
-
-
