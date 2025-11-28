@@ -1,0 +1,237 @@
+:root {
+    /* الألوان الأساسية */
+    --primary-color: #5865F2; /* لون الديسكورد البنفسجي */
+    --secondary-color: #2C2F33; /* لون الخلفية الداكنة */
+    --text-color: #FFFFFF;
+    --light-bg: #36393F;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    text-align: right; /* دعم للغة العربية */
+    direction: rtl;
+}
+
+/* شريط التنقل */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--secondary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: var(--primary-color);
+}
+
+.btn-nav {
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* قسم البطل (Hero Section) */
+.hero-section {
+    background-color: #23272A; /* خلفية أغمق */
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5%;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #F6F6F6;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #B9BBBE;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: #4B55C3; /* درجة أغمق عند التمرير */
+    transform: translateY(-2px);
+}
+
+.member-count {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: #72767D;
+}
+
+/* حركة نبض للزر لجذب الانتباه */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(88, 101, 242, 0.4); }
+    70% { box-shadow: 0 0 0 20px rgba(88, 101, 242, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(88, 101, 242, 0); }
+}
+
+.pulse-effect {
+    animation: pulse 2s infinite;
+}
+
+/* قسم المميزات */
+.features-section {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: var(--light-bg);
+}
+
+.features-section h2 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: right;
+    border-right: 5px solid var(--primary-color);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* قسم الإحصائيات */
+.stats-section {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.stats-section h2 {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    display: block;
+}
+
+.stat-item p {
+    font-size: 1.2rem;
+    color: #B9BBBE;
+}
+
+/* قسم الختام (Final CTA) */
+.final-cta-section {
+    background-color: var(--light-bg);
+    padding: 3rem 5%;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.final-cta-section h2 {
+    margin-bottom: 2rem;
+}
+
+/* التذييل */
+.footer {
+    background-color: #1E2124;
+    padding: 2rem 5%;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* التجاوب (Media Queries) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar ul {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .stats-grid {
+        flex-direction: column;
+    }
+}
