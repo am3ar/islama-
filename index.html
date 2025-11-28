@@ -1,246 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>أبا الأشعري — بروفايل فخم</title>
-  <meta name="description" content="بطاقة تعريف فاخرة لأبا الأشعري — مسلم أشعري. اهتمامات: الشريعة، الفقه، علم الكلام." />
-
-  <!-- خطوط -->
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --bg-900: #060607;
-      --card-900: #0f1112;
-      --text: #f6f3ec;
-      --muted: #c7bca8;
-      --gold-1: #f7e7a8;
-      --gold-2: #c8a93a;
-      --gold-accent: rgba(200,169,58,0.12);
-      --glass: rgba(255,255,255,0.02);
-      --radius: 20px;
-      --maxw: 920px;
-      --pad: 34px;
-      --shadow-outer: 0 24px 60px rgba(0,0,0,0.75);
-      --line: rgba(255,255,255,0.04);
-      --ease: cubic-bezier(.2,.9,.2,1);
-    }
-
-    /* Base reset */
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{
-      font-family: "Cairo", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans Arabic", sans-serif;
-      color:var(--text);
-      background: linear-gradient(180deg,#050506 0%, #0b0b0d 60%);
-      display:grid;place-items:center;
-      padding:48px;
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
-      overflow-x:hidden;
-    }
-
-    /* Decorative SVG background (centered, soft) */
-    body::before{
-      content:"";
-      position:fixed; inset:0; z-index:0;
-      background-image: url('data:image/svg+xml;utf8,\
-        <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">\
-          <defs>\
-            <pattern id="geom" width="120" height="120" patternUnits="userSpaceOnUse">\
-              <g fill="none" stroke="%23c8a93a" stroke-opacity="0.06" stroke-width="1">\
-                <path d="M60 0 L60 120 M0 60 L120 60"/>\
-              </g>\
-            </pattern>\
-            <radialGradient id="halo" cx="50%" cy="35%" r="60%">\
-              <stop offset="0" stop-color="%23c8a93a" stop-opacity="0.06" />\
-              <stop offset="1" stop-color="%23c8a93a" stop-opacity="0" />\
-            </radialGradient>\
-          </defs>\
-          <rect width="1200" height="1200" fill="url(%23geom)"/>\
-          <rect width="1200" height="1200" fill="url(%23halo)"/>\
-        </svg>');
-      background-repeat:no-repeat;
-      background-position:center;
-      background-size:1400px 1400px;
-      pointer-events:none;
-      mix-blend-mode:screen;
-      opacity:0.95;
-      transform: translateZ(0);
-    }
-
-    /* Card container */
-    .wrap{width:100%;max-width:var(--maxw);z-index:1;padding:0 20px}
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(0,0,0,0.02)), var(--card-900);
-      border-radius:calc(var(--radius) + 4px);
-      padding:calc(var(--pad));
-      box-shadow:var(--shadow-outer);
-      border:1px solid var(--line);
-      position:relative;
-      overflow:visible;
-      transform-origin:center;
-      animation: enter 420ms var(--ease) both;
-    }
-
-    /* thin gold frame using pseudo element */
-    .card::before{
-      content:"";
-      position:absolute;
-      inset:8px;
-      border-radius:calc(var(--radius) - 6px);
-      padding:2px;
-      background:
-        linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.005)),
-        conic-gradient(from 180deg at 50% 50%, rgba(0,0,0,0.0), rgba(0,0,0,0.0));
-      -webkit-mask: linear-gradient(#000, #000) content-box, linear-gradient(#000,#000);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      pointer-events:none;
-    }
-    /* subtle golden inner border using SVG overlay */
-    .card::after{
-      content:"";
-      position:absolute; inset:6px; border-radius:calc(var(--radius) - 4px);
-      background: linear-gradient(180deg, rgba(200,169,58,0.06), rgba(200,169,58,0.02));
-      pointer-events:none;
-      mix-blend-mode:overlay;
-      opacity:0.6;
-    }
-
-    @keyframes enter{
-      from{opacity:0; transform:scale(0.985) translateY(8px)}
-      to{opacity:1; transform:scale(1) translateY(0)}
-    }
-
-    header{
-      display:flex; gap:18px; align-items:center; margin-bottom:8px;
-    }
-    .seal{
-      width:86px;height:86px;border-radius:50%;
-      background: radial-gradient(circle at 30% 30%, rgba(247,231,168,0.12), rgba(212,169,58,0.04));
-      border:1px solid rgba(200,169,58,0.18);
-      display:grid; place-items:center; color:var(--gold-2);
-      font-size:34px; flex-shrink:0;
-      box-shadow: inset 0 6px 18px rgba(0,0,0,0.25);
-    }
-    .headtext h1{
-      margin:0; font-family: "Scheherazade New", serif; font-weight:700;
-      font-size: clamp(28px, 4.4vw, 46px); line-height:1; letter-spacing:0.2px;
-      color:var(--text);
-    }
-    .headtext .subtitle{
-      margin-top:8px; color:var(--muted); font-size:15px;
-    }
-
-    /* layout */
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr 320px;
-      gap:26px;
-      align-items:start;
-    }
-    @media (max-width:860px){
-      .grid{grid-template-columns:1fr; padding-top:6px}
-    }
-
-    /* main panel */
-    .main{
-      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));
-      border-radius:12px; padding:18px; border:1px solid rgba(255,255,255,0.02);
-    }
-    .kv{display:flex;flex-direction:column;gap:16px}
-    .row{display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap}
-    .label{min-width:130px;color:var(--muted);font-weight:700}
-    .value{flex:1;color:var(--text);font-weight:500}
-
-    /* side panel */
-    .side{
-      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));
-      border-radius:12px; padding:18px; border:1px solid rgba(255,255,255,0.02);
-      display:flex;flex-direction:column;gap:12px;align-items:stretch;
-    }
-    .tags{display:flex;flex-wrap:wrap;gap:10px}
-    .tag{
-      background:var(--gold-accent);
-      color:var(--text);
-      padding:10px 16px;border-radius:999px;border:1px solid rgba(200,169,58,0.12);
-      font-weight:600;font-size:14px;cursor:default;transition:transform 220ms var(--ease), background 220ms var(--ease);
-    }
-    .tag:hover{transform:scale(1.03);background:rgba(200,169,58,0.18)}
-
-    .quote{
-      margin-top:10px;padding:16px;border-right:4px solid var(--gold-2);
-      background: rgba(200,169,58,0.06); border-radius:10px; color:var(--muted); font-style:italic;
-    }
-
-    /* subtle gold shimmer on hover */
-    .card:hover .seal{
-      box-shadow: inset 0 6px 18px rgba(0,0,0,0.25), 0 6px 20px rgba(200,169,58,0.06);
-      transform: translateY(-2px);
-    }
-
-    /* footer */
-    footer{display:flex;justify-content:center;color:var(--muted);font-size:13px;margin-top:6px}
-
-    /* Accessibility: respect reduced motion */
-    @media (prefers-reduced-motion: reduce){
-      .card{animation:none;transition:none}
-      .tag{transition:none}
-    }
-
-    /* Responsive tweaks */
-    @media (max-width:580px){
-      .seal{width:64px;height:64px;font-size:26px}
-      .headtext h1{font-size:22px}
-      .label{min-width:110px}
-      .grid{gap:18px}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 أفق | Afaq - مجتمع المعرفة والابتكار</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="wrap">
-    <article class="card" role="region" aria-label="بروفايل أبا الأشعري">
-      <header>
-        <div class="seal" aria-hidden="true">☪︎</div>
-        <div class="headtext">
-          <h1>أَبَا الأَشْعَرِيّ</h1>
-          <div class="subtitle">مُسْلِمٌ أَشْعَرِيّ • بُرُوفَايْل كْلَاسِيكيٌّ فَاخِر</div>
+
+    <nav class="navbar">
+        <div class="logo">أفــق</div>
+        <ul>
+            <li><a href="#features">المميزات</a></li>
+            <li><a href="#stats">الإحصائيات</a></li>
+            <li><a href="#contact">تواصل</a></li>
+            <li><a href="[رابط الدعوة]" class="btn-nav">انضم لـ "أفق"</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>اكتشف أفقاً جديداً للمعرفة والإبداع</h1>
+            <p>مجتمع عربي يجمع المبدعين، المطورين، وعشاق الفن. انضم لنا، وشارك شغفك.</p>
+            <a href="[رابط دعوة سيرفرك هنا]" class="btn-cta pulse-effect">
+                <span>انضم إلينا الآن</span>
+                <i class="icon-discord"></i> </a>
+            <p class="member-count" id="memberCounter">أكثر من <span data-target="1500">0</span> عضو ينتظرك!</p>
         </div>
-      </header>
+    </header>
 
-      <div class="grid" role="main">
-        <section class="main" aria-label="النبذة">
-          <div class="kv" aria-hidden="false">
-            <div class="row"><div class="label">الاسم</div><div class="value">أَبَا الأَشْعَرِيّ</div></div>
-            <div class="row"><div class="label">الهُوِيَّة</div><div class="value">مُسْلِمٌ أَشْعَرِيّ</div></div>
-            <div class="row"><div class="label">الشَّغَف</div><div class="value">نَشْرُ الخَيْرِ، طَلَبُ العِلْمِ، وَمُسَاعَدَةُ الآخَرِينَ</div></div>
-          </div>
+    <section id="features" class="features-section">
+        <h2>لماذا "أفق"؟</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>نقاشات متخصصة</h3>
+                <p>قنوات منظمة للبرمجة، التصميم الجرافيكي، اللغة الإنجليزية، وغيرها.</p>
+            </div>
+            <div class="feature-card">
+                <h3>فعاليات وورش عمل</h3>
+                <p>نستضيف فعاليات أسبوعية وورش عمل حية لتطوير مهاراتك بشكل مستمر.</p>
+            </div>
+            <div class="feature-card">
+                <h3>مجتمع داعم</h3>
+                <p>بيئة إيجابية خالية من السلبية، هدفها مساعدة الجميع على النمو.</p>
+            </div>
+        </div>
+    </section>
 
-          <div class="quote" aria-label="اقتباس">الحَيَاةُ رِحْلَةٌ... وَالزَّمَنُ يَمْضِي، وَلَكِنَّ الأَثَرَ يَبْقَى.</div>
-        </section>
+    <section id="stats" class="stats-section">
+        <h2>نحن ننمو باستمرار</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number" data-target="1500">0</span>
+                <p>عضو فعال</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="50">0</span>
+                <p>قناة متخصصة</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="120">0</span>
+                <p>فعالية مكتملة</p>
+            </div>
+        </div>
+    </section>
 
-        <aside class="side" aria-label="الاهتمامات">
-          <h3 style="margin:0;color:var(--text);font-weight:700;font-size:15px">الاهتمامات</h3>
-          <div class="tags" role="list">
-            <span class="tag" role="listitem">الشَّرِيعَة</span>
-            <span class="tag" role="listitem">الفِقْه</span>
-            <span class="tag" role="listitem">عِلْمُ الكَلَام</span>
-          </div>
-          <!-- reserved area for future items (awards, links...) -->
-        </aside>
-      </div>
+    <section class="final-cta-section">
+        <h2>انضم إلينا اليوم ووسع مداركك!</h2>
+        <a href="[رابط دعوة سيرفرك هنا]" class="btn-cta">ابدأ رحلتك في "أفق"</a>
+    </section>
 
-      <footer>© <span id="year"></span> أَبَا الأَشْعَرِيّ</footer>
-    </article>
-  </div>
+    <footer id="contact" class="footer">
+        <p>جميع الحقوق محفوظة &copy; 2024 سيرفر "أفق".</p>
+        <div class="social-links">
+            <a href="#">تويتر/X</a> | <a href="#">إنستغرام</a> | <a href="#">ديسكورد</a>
+        </div>
+    </footer>
 
-  <script>
-    // السنة التلقائية
-    document.getElementById('year').textContent = new Date().getFullYear();
-    // small accessibility helper: allow focusing tags with keyboard for copy/select if needed
-    document.querySelectorAll('.tag').forEach(t => t.setAttribute('tabindex','0'));
-  </script>
+    <script src="script.js"></script>
 </body>
 </html>
