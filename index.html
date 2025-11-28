@@ -1,67 +1,65 @@
-... (الجزء العلوي كما هو) ...
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أفق - مجتمع النقاش الفكري العميق</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
 
-    <nav class="navbar">
-        <div class="logo">أفــق</div>
-        <ul>
-            <li><a href="#features">الأساس</a></li>
-            <li><a href="#featured">مفكرون</a></li>
-            <li><a href="archive.html">الأرشيف</a></li> <li><a href="#contact">تواصل</a></li>
-            <li><a href="[رابط الدعوة]" class="btn-nav">انضم لـ "أفق"</a></li>
-        </ul>
+    <button id="backToTop" aria-label="العودة للأعلى">⬆️</button>
+
+    <nav class="navbar" id="mainNav">
+        <a href="#hero" class="logo">أفــق</a>
+        <div class="nav-links">
+            <a href="#pillars">الأسس الفكرية</a>
+            <a href="#archives">أرشيف النقاش</a>
+            <a href="#leaders">قادة الحوار</a>
+            <a href="https://discord.gg/JJ2gSG94FG" target="_blank" class="btn-join">انضم إلى مجتمعنا</a>
+        </div>
     </nav>
 
-    <header class="hero-section">
+    <section id="hero" class="hero-section">
         <div class="hero-content">
-            <h1>أفق: حيث تلتقي الفلسفة، المنطق، والتاريخ</h1>
-            <p>مجتمع للنقاش العميق والبناء. انضم إلينا لنتجاوز السطحية ونستكشف أعماق الأفكار.</p>
-            <a href="https://discord.gg/JJ2gSG94FG" class="btn-cta pulse-effect">
-                <span>ابدأ رحلة التفكير العميق</span>
-                <i class="icon-discord"></i>
-            </a>
-            <p class="member-count">حالياً لدينا <span data-target="2000" id="liveMemberCount">0</span> باحثاً عن الحقيقة!</p>
-        </div>
-    </header>
-
-    <section id="features" class="features-section">
-        <h2>أساسيات "أفق" الفكرية</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <h3>مجالس الفلسفة</h3>
-                <p>نقاشات منظمة حول الأفكار الكبرى، المذاهب الفكرية، ونظريات المعرفة.</p>
-            </div>
-            <div class="feature-card">
-                <h3>غرف المنطق والبراهين</h3>
-                <p>تعلم فنون الجدل، بناء الحجج، وتجنب المغالطات المنطقية.</p>
-            </div>
-            <div class="feature-card">
-                <h3>مدارات التاريخ</h3>
-                <p>استكشاف وتحليل الأحداث التاريخية الكبرى والحضارات القديمة بعمق.</p>
+            <h1>انطلق في رحلة استكشاف **أعماق** الفكر البشري.</h1>
+            <p>أفق هو ليس مجرد سيرفر؛ إنه منبر للتساؤل الحر، الجدل المنطقي، واستيعاب التاريخ.</p>
+            <div class="cta-group">
+                <a href="https://discord.gg/JJ2gSG94FG" target="_blank" class="btn-primary">
+                    <i class="icon-discord"></i> انضم الآن واطرح تساؤلك الأول
+                </a>
+                <a href="#pillars" class="btn-secondary">استكشف محاورنا</a>
             </div>
         </div>
     </section>
-    
-    <section id="featured" class="featured-section">
-        <h2>أصوات بارزة في أفق</h2>
-        <p class="subtitle">تعرف على بعض من مفكرينا الأكثر نشاطاً في السيرفر.</p>
-        <div class="debaters-list">
-            <div class="debater-card">
-                <img src="avatar1.jpg" alt="صورة المستخدم 1" class="debater-avatar">
-                <h4>المحاور: زيد</h4>
-                <p>خبير في الفلسفة اليونانية وعلم الأخلاق.</p>
+
+    <section id="pillars" class="pillars-section">
+        <h2>الركائز التي يقوم عليها **أفق**</h2>
+        <div class="pillar-grid">
+            <div class="pillar-card fade-in">
+                <h3>الفلسفة الوجودية والميتافيزيقا</h3>
+                <p>غرف نقاش مخصصة لدراسة الأفكار الفلسفية الكبرى ومفاهيم الوجود، المعرفة، والقيم.</p>
             </div>
-            <div class="debater-card">
-                <img src="avatar2.jpg" alt="صورة المستخدم 2" class="debater-avatar">
-                <h4>الباحث: سارة</h4>
-                <p>متخصصة في تاريخ العصور الوسطى والمنطق الحديث.</p>
+            <div class="pillar-card fade-in">
+                <h3>المنطق وسلامة الاستدلال</h3>
+                <p>مساحة لتعلم المنطق الصوري، وتحليل الحجج، وتصنيف المغالطات لتطوير مهارة التفكير النقدي.</p>
             </div>
+            <div class="pillar-card fade-in">
+                <h3>التاريخ والتحليل الحضاري</h3>
+                <p>استعراض الأحداث التاريخية وتحليل تأثيرها، والتعمق في الفلسفة الكامنة وراء صعود وسقوط الحضارات.</p>
             </div>
+        </div>
     </section>
 
-    ...
-
-    <button id="backToTop" title="العودة للأعلى">🔝</button>
-
-    ...
-    <script src="script.js"></script>
-</body>
-</html>
+    <section id="archives" class="archives-section">
+        <h2>من وحي أرشيفنا الأخير</h2>
+        <p class="section-subtitle">إطلالة على أبرز المواضيع التي تم تداولها مؤخراً في غرف "أفق" الفكرية.</p>
+        
+        <div class="archive-highlights fade-in">
+            <article class="highlight-card">
+                <h4>لماذا فشلت يوتوبيا أفلاطون؟</h4>
+                <p>تحليل نقدي لدولة أفلاطون الفاضلة ومقارنتها بالتطبيقات السياسية المعاصرة.</p>
+                <span>#فلسفة_سياسية #مثالية</span>
+            </article>
+            <article class="highlight-card
